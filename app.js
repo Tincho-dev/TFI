@@ -36,14 +36,24 @@ class Linea{
 }
 
 class OrdenDeProduccion{
-    constructor(numero,horadeInicio,fechaDeInicio){
+    
+    numero;
+    horaDeInicio;
+    fechaDeInicio;
+    jornadas = [];
+    constructor(numero,horaDeInicio,fechaDeInicio){
         this.numero=numero;
-        this.horadeInicio=horadeInicio;
+        this.horadeInicio=horaDeInicio;
         this.fechaDeInicio=fechaDeInicio;
     }
     obtenerUltimaJornada(){}
 }
-class EstadoOP{}//enum
+
+const EstadoOP = {
+    ACTIVA : `activa`,
+    PAUSADA : `pausada`,
+    FINALIZADA : `finalizada`
+}
 
 class ControladorAsociarSupervisoraOP{
     supervisorLibre(Empleado){}
